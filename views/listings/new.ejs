@@ -1,18 +1,18 @@
 <% layout("/layouts/boilerplate") %>
 
-    <div class="row mt-3">
-        <div class="col-8 offset-2">
+    <div class="row mt-3 new-page">
+        <div class="col-8 offset-2 ">
 
-            <h2>Create New Listing</h2>
+            <h2 class="heading">CREATE NEW LISTING</h2>
             <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
-                <div class="mb-3">
+                <div class="mb-3 title">
                     <label for="title" class="form-label">Title</label>
                     <input name="listing[title]" placeholder="Enter Catchy Title" type="text" class="form-control"
                         required>
                     <div class="valid-feedback">Title looks good!</div>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 title">
                     <label for="description" class="form-label">Description</label>
                     <textarea name="listing[description]" placeholder="Enter Your Description" class="form-control"
                         required></textarea>
@@ -20,20 +20,20 @@
 
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 title">
                     <label for="image" class="form-label">Upload Image</label>
                     <input name="listing[image]" type="file" class="form-control" required>
                 </div>
 
                 <div class="row">
-                    <div class="mb-3 col-md-4">
+                    <div class="mb-3 col-md-4 head">
                         <label for="price" class="form-label">Price</label>
                         <input name="listing[price]" placeholder="1200"  class="form-control" required>
                         <div class="invalid-feedback">Enter price</div>
 
                     </div>
 
-                    <div class="mb-3 col-md-8">
+                    <div class="mb-3 col-md-8 head">
                         <label for="country" class="form-label">Country</label>
                         <input name="listing[country]" placeholder="India" type="text"
                             class="form-control" required>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
 
-                <div class="mb-3">
+                <div class="mb-3 location">
                     <label for="location" class="form-label">Location</label>
                     <input name="listing[location]" placeholder="Noida, Uttar Pradesh" type="text" class="form-control" required>
                     <div class="invalid-feedback">Please enter location</div>

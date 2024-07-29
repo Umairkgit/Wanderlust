@@ -1,53 +1,81 @@
 <style>
-    .search-btn{
-        background-color: #fe424d;
-        color: white;
+    .search-btn {
+        background-color: #FBBF54;
+        color: rgb(0, 0, 0);
         border-radius: 25px;
         padding: 0 1rem 0 1rem;
+
     }
+
     .search-btn i {
         display: inline;
         margin-right: 0.5rem;
+
     }
-    .search-btn:hover{
+
+    .search-btn:hover {
         background-color: #fe424d;
         color: white;
     }
+
     .search-inp {
         border-radius: 25px;
         padding: 0.5rem 3rem 0.5rem 3rem;
         font-size: 1rem;
     }
+
+    .nav-logo {
+        height: 6rem;
+        width: 22rem;
+    }
 </style>
 
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+
     <div class="container-fluid">
-        <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
+        <a class="navbar-brand" href="/listings">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon src="https://cdn.lordicon.com/avqmmngi.json" trigger="hover" style="width:100px;height:85px">
+            </lord-icon>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link" href="/listings">Explore</a>
+                <!-- <h1 class="nav-link-name" href="/listings">Wanderlust</h1> -->
+                <img src="/logo.png" class="nav-logo">
             </div>
 
-            <div class="navbar-nav ms-auto">
+            <div class="navbar-nav ms-auto">F
                 <form class="d-flex" role="search">
-                    <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" aria-label="Search">
-                    <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>Search</button>
-                  </form>
+                    <input class="form-control me-2 search-inp search" type="search" placeholder="Search destinations"
+                        aria-label="Search">
+                    <button class="btn search-btn search" type="submit"><i
+                            class="fa-sharp fa-solid fa-magnifying-glass fa-sm"
+                            style="color: #000000;"></i></i>Search</button>
+                </form>
             </div>
 
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Airbnb your home</a>
-                <% if(!currUser) { %>
+                <a class="nav-link" href="/listings/new">Add Your Home</a>
+                <a class="nav-link"><i class="fa-solid fa-globe" style="color: #ffffff;"></i></a>
+
+                <% if( typeof currUser==="undefined" ) { %>
                     <a class="nav-link" href="/signup"><b>Signup</b></a>
                     <a class="nav-link" href="/login"><b>Login</b></a>
-                    <% } %> <% if(currUser) { %>
-                    <a class="nav-link" href="/logout"><b>Logout</b></a>
+                    <a href="/login" class="nav-link">
+                        <i class="fa-solid fa-user"></i>
+                    </a>
                     <% } %>
+                        <% if( currUser ) { %>
+                            <a class="nav-link" href="/logout"><b>Logout</b></a>
+                            <a href="/logout" class="nav-link"><i class="fa-solid fa-right-to-bracket"></i></a>
+                            <% } %>
+
             </div>
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
         </div>
     </div>
 </nav>

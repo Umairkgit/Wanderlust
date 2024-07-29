@@ -1,9 +1,17 @@
 body {
 
-      font-family: "Plus Jakarta Sans", sans-serif !important;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    font-family: "Plus Jakarta Sans", sans-serif !important;
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-image: url('/bg.jpeg'); */
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 100%;
 }
 
 .container {
@@ -11,9 +19,13 @@ body {
 }
 
 /* NAVBAR */
+.search{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+
+}
 .navbar {
     height: 5rem;
-    background-color: white;
+    background-color: rgb(227, 10, 10);
 }
 
 .fa-compass {
@@ -22,8 +34,19 @@ body {
 }
 
 .nav-link {
-    color: #222222 !important;
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    font-size: 15px !important;
 }
+
+
+/* .nav-link-name{
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    font-size: 1rem !important;
+    font-style: italic;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+} */
 
 /* FOOTER */
 .f-info-links a {
@@ -33,6 +56,10 @@ body {
 
 .f-info-links a:hover {
     text-decoration: underline;
+}
+
+.service-info {
+    text-decoration: none;
 }
 
 .f-info {
@@ -46,7 +73,8 @@ body {
 }
 
 .f-info-links,
-.f-info-socials, .f-info-brand {
+.f-info-socials,
+.f-info-brand {
     width: 100%;
     display: flex;
     align-items: center;
@@ -62,39 +90,59 @@ body {
 .listing-card {
     border: none !important;
     margin-bottom: 2rem;
+
+
 }
+
+.listing-card-img {
+    border-radius: 1rem;
+    transition: all ease 0.5s;
+    margin-bottom: 10px;
+
+}
+
 
 .card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
+    transition: all ease 0.5s;
+
+
 }
 
+.card-img-top:hover {
+    box-shadow: 8px 8px 10px black;
+
+}
+
+
 .card-body {
+    /* background-color: red; */
     padding: 0 !important;
+    border-radius: 1rem;
+}
+
+.card-text {
+    /* color: white; */
+    padding: 0px 5px 0px 5px;
+
 }
 
 .card-text p {
     font-weight: 400 !important;
 }
+
 .listing-link {
     text-decoration: none;
-}
 
-/* CARD EFFECT */
-.card-img-overlay {
-    opacity: 0;
-}
-
-.card-img-overlay:hover {
-    opacity: 0.2;
-    background-color: white;
 }
 
 .add-btn {
     background-color: #fe424d !important;
     border: none !important;
 }
+
 .edit-btn {
     background-color: #fe424d !important;
     border: none !important;
@@ -102,7 +150,7 @@ body {
 
 /* SHOW PAGE */
 .show-img {
-    height: 30vh;
+    height: 50vh;
 }
 
 .btns {
@@ -113,3 +161,186 @@ body {
     padding-left: 0;
     padding-right: 0;
 }
+
+
+
+.price-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+body {
+    background-color: #f8f9fa !important;
+    margin-top: 20px;
+}
+
+.text-custom,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li.active a,
+.service-box .services-icon,
+.price-features p i,
+.faq-icon,
+.social .social-icon:hover {
+    color: #f6576e !important;
+}
+
+.bg-custom,
+.btn-custom,
+.timeline-page .timeline-item .date-label-left::after,
+.timeline-page .timeline-item .duration-right::after,
+.back-to-top:hover {
+    background-color: #f6576e;
+}
+
+.btn-custom,
+.custom-form .form-control:focus,
+.social .social-icon:hover,
+.registration-input-box:focus {
+    border-color: #f6576e;
+}
+.form-control{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+}
+.service-box .services-icon,
+.price-features p i {
+    background-color: rgba(246, 87, 110, 0.1);
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active,
+.btn-custom.focus,
+.btn-custom:active,
+.btn-custom:focus,
+.btn-custom:hover,
+.open>.dropdown-toggle.btn-custom {
+    border-color: #e45267;
+    background-color: #e45267;
+}
+
+
+.price-box {
+    padding: 40px 50px;
+}
+
+.plan-price h1 span {
+    font-size: 16px;
+    color: #000;
+}
+
+.price-features p i {
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    font-size: 14px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+
+
+/* Review */
+body {
+    background-color: #f5f7fa;
+}
+
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -40px;
+    left: 19px;
+}
+
+
+/* SIGNUP PAGE */
+.signup-form {
+    /* background-color: rgba(255, 0, 0, 0.189); */
+    color: rgb(0, 0, 0);
+    border-radius: 1rem;
+    font-weight: 900;
+    padding-top: 5rem;
+}
+
+.signup-page {
+    /* background: linear-gradient(to bottom, #e0dede, #b0b0b0, #7a7b7b); */
+    background-image: url('/bg3.jpeg');
+    
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); 
+
+}
+
+.login-page{
+    background-image: url('/bg2.jpeg');
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 50px 50px rgba(255, 255, 255, 1);
+}
+
+.new-page{
+    
+        background-image: url('/bg.jpeg');
+        box-sizing: border-box;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-top: 5rem;
+        padding-bottom: 10rem;
+        border-radius: 3rem;
+        box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 1);
+}
+
+
+.title{
+    font-weight: 900;
+}
+.head{
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+.heading{
+    color: black;
+    font-weight: 900;
+    text-shadow: 2px 2px 3px #1e1d1d;
+    position: relative;
+}
+.user-info {
+    margin: 5px;
+}
+
+.signup-btn {
+    margin-top: 5px;
+    margin-bottom: 50px;
+
+}
+
+
+
+/* OUR CUSTOMERS */

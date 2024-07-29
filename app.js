@@ -1,6 +1,7 @@
-if(process.env.NODE_ENV != "production") {
+if (process.env.NODE_ENV != "production") {
     require("dotenv").config();
 }
+
 
 const express = require("express");
 const app = express();
@@ -25,11 +26,13 @@ const userRouter = require("./routes/user.js");
 const dbUrl = process.env.ATLASDB_URL;
 
 
-main().then(() => {
-    console.log("connected to db");
-}).catch((err) => {
-    console.log(err);
-});
+main()
+    .then(() => {
+        console.log("connected to db");
+    })
+    .catch((err) => {
+        console.log(err);
+    });
 async function main() {
     await mongoose.connect(dbUrl);
 }
@@ -96,21 +99,14 @@ app.use((req, res, next) => {
 });
 
 
-// app.get("/demouser", async (req, res) => {
-//     let fakeUser = new User({
-//         email: "student@gmail.com",
-//         username: "delta-student"
-//     });
-
-//      let registeredUser = await User.register(fakeUser, "helloworld");
-//      res.send(registeredUser);
-// });
-
 
 app.use("/listings", listingRouter);
 app.use("/listings/:id/reviews", reviewRouter);
 app.use("/", userRouter);
 
+app.use("/", (req, res) => {
+    res.redirect("/listings")
+}) 
 
 app.all("*", (req, res, next) => {
     next(new ExpressError(404, "Page Not Found!"));
@@ -121,6 +117,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error.ejs", { message });
     // res.status(statusCode).send(message);
 });
+
+
 
 app.listen(8080, () => {
     console.log("server is listening to port 8080");
