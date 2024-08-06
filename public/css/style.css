@@ -338,9 +338,19 @@ body {
 .signup-btn {
     margin-top: 5px;
     margin-bottom: 50px;
-
 }
 
 
 
-/* OUR CUSTOMERS */
+/* HEADER SECTION  */
+
+.header{
+    width: 10px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+.header video{
+    width: 120px;
+    height: 40px;
+}
