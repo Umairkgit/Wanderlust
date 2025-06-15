@@ -1,5 +1,6 @@
 <% layout("/layouts/boilerplate") %>
 
+
     <div class="row mt-3 ">
         <div class="col-8 offset-2">
             <h3>
@@ -8,67 +9,142 @@
         </div>
         <div class="card col-8 offset-2 show-card listing-card">
             <!-- col-6 -->
-            <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
+            <!-- <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image"> -->
+
+
+
+
+            <div class="gallery">
+
+                <img class="four-grid-cells" src="<%= listing.image.url %>" alt="Northern Winter Sky Image" />
+
+                <img src="<%= listing.image.url %>" alt="Shining Stars Image" />
+
+                <img class="wide-image" src="<%= listing.image.url %>" alt="A River Flowing Image" />
+
+                <img src="<%= listing.image.url %>" alt="A cloudy Mountain Image" />
+
+
+            </div>
+
+
+
+
+
+
             <div class="card-body">
                 &nbsp;
-                <!-- <p class="card-text">Owned By:<b><i>
-                            
-                        </i></b> 
-                    </p> -->
 
-
-                <p class="card-text"></p>
                 <h4><b>About <%= listing.title %> </b></h4>
                 <%= listing.description %>
                     </p>
 
+                    <!-- <div class="container">
+
+                        <div class="row justify-content-center text-center">
+                            <div class="col-lg-12">
+                                <h2 class="font-weight-light">Our Pricing</h2>
+                            </div>
+                        </div>
+                        <div class="row price-tag">
+                            <div class="col-lg-4 ">
+                                <div class="bg-white price-box">
+
+                                    <div class="plan-price text-center">
+                                        <h1 class="text-custom font-weight-normal mb-0">
+                                            <%= listing.price.toLocaleString("en-IN")%>/Night
+                                        </h1>
+                                    </div>
+                                    <div class="price-features mt-2">
+                                        <p><i class="mdi mdi-check"></i> Free WiFi</p>
+                                        <p><i class="mdi mdi-check"></i> Free WiFi</p>
+                                        <p><i class="mdi mdi-check"></i> Housekeeping</p>
+                                        <p><i class="mdi mdi-check"></i> 2 Beds</p>
+                                        <p><i class="mdi mdi-check"></i> 1 Bathroom</p>
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <a href="#" class="btn btn-danger ">Book Now</a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
                     <div class="price-sec">
-                        <!-- <h6><b><i class="fa-solid fa-indian-rupee-sign">&nbsp;</i>Price</b></h6> -->
-                        <!-- <p class="card-text"></p>&#8377;/night </p>
-                        <p>Total before taxes</p>
-                        <button class="btn btn-dark offset-4">Book Now</button> -->
+                        <link
+                            href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css"
+                            rel="stylesheet">
+
+                    </div> -->
 
 
 
-                        <link href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.9.95/css/materialdesignicons.css" rel="stylesheet">
-<div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-12">
-                <h2 class="font-weight-light">Our Pricing</h2>
-            </div>
-        </div>                
-        <div class="row price-tag">
-            <div class="col-lg-4 ">
-        		<div class="bg-white price-box">
+
+
+
+
+
+
+
+
+
+                    <div class="container">
+                        <div class="price">
+                            <span class="original">₹5,013</span>
+                            <span class="discounted"><%= listing.price.toLocaleString("en-IN")%></span> night
+                        </div>
                     
-        			<div class="plan-price text-center">
-        				<h1 class="text-custom font-weight-normal mb-0"><%= listing.price.toLocaleString("en-IN")%>/Night</h1>
-        			</div>
-        			<div class="price-features mt-2">
-        				<p><i class="mdi mdi-check"></i> Free WiFi</p>
-        				<p><i class="mdi mdi-check"></i> Free WiFi</p>
-        				<p><i class="mdi mdi-check"></i> Housekeeping</p>
-        				<p><i class="mdi mdi-check"></i> 2 Beds</p>
-        				<p><i class="mdi mdi-check"></i> 1 Bathroom</p>
-        			</div>
-        			<div class="text-center mt-4">
-        				<a href="#" class="btn btn-danger ">Book Now</a>
+                        <div class="section">
+                            <div class="flex">
+                                <div>
+                                    <label for="checkin" class="label">CHECK-IN</label>
+                                    <input type="date">
+                                </div>
+                                <div>
+                                    <label for="checkout" class="label">CHECKOUT</label>
+                                    <div id="checkout" class="value">9/11/2024</div>
+                                </div>
+                            </div>
+                            <div class="guests">
+                                <label for="guests" class="label">GUESTS</label>
+                                <div id="guests" class="value">1 guest</div>
+                            </div>
+                        </div>
+                    
+                        <button class="reserve-button">Reserve</button>
+                    
+                        <p class="note">You won't be charged yet</p>
+                    
+                        <div class="summary">
+                            <div class="line-item">
+                                <span>₹4,499 x 5 nights</span>
+                                <span>₹22,495</span>
+                            </div>
+                            <div class="line-item">
+                                <span>Airbnb service fee</span>
+                                <span>₹3,176</span>
+                            </div>
+                            <div class="line-item total">
+                                <span>Total before taxes</span>
+                                <span>₹25,671</span>
+                            </div>
+                        </div>
                     </div>
-        			
-        		</div>
-        	</div>
-        	
-        </div>
-	</div>
-                    </div>
+
+
 
 
                     <p class="card-text">
-                       <h6><b>Location <i class="fa-solid fa-location-dot"></i></b></h6>
-                       <p> <%= listing.location %></p>
-                        </p>
-                       <p><%= listing.country %></p>
-                        
+                    <h6><b>Location <i class="fa-solid fa-location-dot"></i></b></h6>
+                    <p>
+                        <%= listing.location %>
+                    </p>
+                    </p>
+                    <p>
+                        <%= listing.country %>
+                    </p>
+
             </div>
             <br>
 
@@ -116,13 +192,13 @@
                                 <button class="btn btn-outline-danger">Submit</button>
                             </form>
                             <% } %>
-                            &nbsp;
+                                &nbsp;
                                 <% if(listing.reviews.length> 0) {%>
                                     <div class="row">
                                         <h3>All Reviews</h3>
 
                                         <% for (review of listing.reviews) {%>
-                                             <!-- REVIER CARD -->
+                                            <!-- REVIER CARD -->
                                             <div class="container">
                                                 <section class="mx my-5" style="max-width: 23rem;">
                                                     <div class="card">
@@ -133,22 +209,26 @@
                                                                     class="blockquote-custom-icon bg-info shadow-1-strong">
                                                                     <i class="fa fa-quote-left text-white"></i>
                                                                 </div>
-                                                                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                                                                <script
+                                                                    src="https://cdn.lordicon.com/lordicon.js"></script>
                                                                 <lord-icon src="https://cdn.lordicon.com/xcxzayqr.json"
-                                                                    trigger="hover" style="width:40px;height:40px" class="review-profile">
+                                                                    trigger="hover" style="width:40px;height:40px"
+                                                                    class="review-profile">
                                                                 </lord-icon>
-                                                                
+
                                                                 <p><b>@<%= review.author.username %></b></p>
-                                                                <p class="starability-result card-text" data-rating="<%= review.rating %>"></p>
-                                                                    <p class="mb-0 mt-2 font-italic"><%= review.comment %></p>
-                                                                    <footer
-                                                                        class="blockquote-footer pt-4 mt-4 border-top">
-                                                                        <form class="mb-3" method="POST"
-                                                                            action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
-                                                                            <button
-                                                                                class="btn btn-sm btn-dark">Delete</button>
-                                                                        </form>
-                                                                    </footer>
+                                                                <p class="starability-result card-text"
+                                                                    data-rating="<%= review.rating %>"></p>
+                                                                <p class="mb-0 mt-2 font-italic">
+                                                                    <%= review.comment %>
+                                                                </p>
+                                                                <footer class="blockquote-footer pt-4 mt-4 border-top">
+                                                                    <form class="mb-3" method="POST"
+                                                                        action="/listings/<%= listing._id %>/reviews/<%= review._id %>?_method=DELETE">
+                                                                        <button
+                                                                            class="btn btn-sm btn-dark">Delete</button>
+                                                                    </form>
+                                                                </footer>
                                                             </blockquote>
                                                         </div>
                                                     </div>
@@ -158,8 +238,5 @@
                                             <% } %>
                                     </div>
                                     <% } %>
-
-
                     </div>
-
         </div>
